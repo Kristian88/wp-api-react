@@ -2,6 +2,7 @@ import {render}             from 'react-dom';
 import DataActions          from 'flux/actions/DataActions.js';
 
 import Home                 from 'components/Home.js';
+import Kontakt              from 'components/Kontakt.js';
 import About                from 'components/About.js';
 import Contact              from 'components/Contact.js';
 import Header               from 'components/Header.js';
@@ -18,7 +19,8 @@ class AppInitializer {
 
     templates = {
         'about': About,
-        'contact': Contact
+        'contact': Contact,
+        'kontakt': Kontakt
     }
 
     buildRoutes(data){
@@ -29,9 +31,9 @@ class AppInitializer {
                     component={this.templates[page.slug]}
                     path={`/${page.slug}`}
                     exact
-                /> 
+                />
             )
-        })     
+        })
     }
 
     run() {
@@ -46,7 +48,7 @@ class AppInitializer {
 
                             {this.buildRoutes(response)}
                             <Route render={() => { return <Redirect to="/" /> }} />
-                        </Switch> 
+                        </Switch>
                     </div>
                 </Router>
 
