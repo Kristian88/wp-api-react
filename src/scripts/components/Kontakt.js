@@ -1,6 +1,6 @@
 import DataStore from 'flux/stores/DataStore.js'
 
-class Home extends React.Component {
+class Kontakt extends React.Component {
     render() {
         let pageData = DataStore.getPageBySlug('kontakt');
 
@@ -16,4 +16,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Kontakt;
